@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-body {
+body,h1 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 

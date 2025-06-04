@@ -45,7 +45,7 @@ export default function RegistrationForm() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-md mx-auto my-16 p-6 bg-white">
-        <h2 className="text-xl font-light text-center mb-6 tracking-wide capitalize">
+        <h2 className="text-2xl font-bold text-center mb-6 tracking-wide capitalize">
           {role} Registration
         </h2>
         <form onSubmit={handleSubmit}>
