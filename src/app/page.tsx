@@ -6,8 +6,8 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white py-20 px-4 text-center border-b">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="bg-white py-20 px-4 text-center">
         <h1 className="text-4xl font-sans md:text-5xl mb-4 tracking-tight">
           Connecting Farmers & Buyers
         </h1>
@@ -20,16 +20,16 @@ export default function Home() {
             onClick={() => router.push('/farmer')}
             className="bg-gray-900 text-white py-2 px-5 text-sm tracking-wide"
           >
-            Farmer Registration
+            Join as Farmer
           </button>
           <button
             onClick={() => router.push('/buyer')}
             className="border border-gray-900 text-gray-900 py-2 px-5 text-sm tracking-wide"
           >
-            Buyer Registration
+            Join as Buyer
           </button>
         </div>
-      </header>
+      </div>
     </div>
   );
 }

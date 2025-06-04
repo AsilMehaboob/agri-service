@@ -12,6 +12,7 @@
     "@google-cloud/local-auth": "^2.1.1",
     "google-spreadsheet": "^4.1.4",
     "googleapis": "^105.0.0",
+    "ldrs": "^1.1.7",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
