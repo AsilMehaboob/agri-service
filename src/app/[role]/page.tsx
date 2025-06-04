@@ -19,7 +19,7 @@ export default function RegistrationForm() {
     if (!isValidRole) {
       router.push('/');
     }
-  }, [isValidRole]);
+  }, [isValidRole, router]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,9 +45,10 @@ export default function RegistrationForm() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-md mx-auto my-16 p-6 bg-white">
-        <h2 className="text-2xl font-bold text-center mb-6 tracking-wide capitalize">
+        <h2 className="text-2xl font-bold text-center tracking-wide capitalize">
           {role} Registration
         </h2>
+        <p className='text-center text-sm mt-2 mb-6 tracking-wide'>Enter the Details</p>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
