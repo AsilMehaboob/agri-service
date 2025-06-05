@@ -17,8 +17,8 @@ export default function Home() {
         <h1 className="text-4xl font-sans font-bold md:text-5xl mb-4 tracking-tight text-gray-800">
           Connecting Farmers & Buyers
         </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Direct agricultural marketplace
+        <p className="text-gray-600 max-w-2xl text-xl mx-auto">
+          Connect. Grow. Thrive.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
