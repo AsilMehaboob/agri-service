@@ -1,3 +1,4 @@
+/* eslint-disable */ //nextjs requires this to be disabled for the layout file as they have not resolved the eslint issue for app router 
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import "./globals.css";

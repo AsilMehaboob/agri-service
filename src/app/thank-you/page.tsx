@@ -61,7 +61,7 @@ export default function ThankYou() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-[#666] text-sm mb-8"
           >
-            Thank you for joining. We'll contact you shortly.
+            Thank you for joining. We&apos;ll contact you shortly.
           </motion.p>
 
           <motion.button
