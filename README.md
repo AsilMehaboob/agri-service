@@ -215,7 +215,7 @@ This guide helps developers integrate their BAP (Beckn Application Platform) or 
 
 ## High-level Flow Diagram
 
-![High-level flow diagram](flow-diagram.svg)
+![High-level flow diagram](flow-diagram.png)
 ---
 
 ## Relevant Tags/Taxonomy
