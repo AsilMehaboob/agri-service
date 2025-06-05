@@ -2,8 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import { Sprout } from "lucide-react"
+import { Button } from '@/components/ui/button'
 
-export default function Home() {
+export default function Home() { 
   const router = useRouter();
 
   return (
@@ -21,18 +22,18 @@ export default function Home() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-          <button
+          <Button
             onClick={() => router.push('/farmer')}
-            className="bg-gray-900  text-white py-2 px-5 text-sm tracking-wide"
+            className="bg-[#1F514C]  text-white py-2 px-5 text-sm tracking-wide"
           >
             Join as Farmer
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => router.push('/buyer')}
-            className="border border-gray-900 text-gray-900 py-2 px-5 text-sm tracking-wide"
+            className="border border-gray-900 bg-white text-[#1F514C] hover:bg-gray-100 py-2 px-5 text-sm tracking-wide"
           >
             Join as Buyer
-          </button>
+          </Button>
         </div>
       </div>
     </div>
