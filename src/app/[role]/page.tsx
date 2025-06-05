@@ -28,20 +28,28 @@ export default function RegistrationForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      await fetch("/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, role }),
-      })
-      router.push("/thank-you")
-    } catch (err) {
-      console.error("Submission failed:", err)
-      setIsSubmitting(false)
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("/api/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...formData, role }),
+    });
+
+    if (!response.ok) {
+      throw new Error("API responded with error status");
     }
+
+    router.push("/thank-you");
+  } catch (err) {
+    console.error("Submission failed:", err);
+    router.push("/error");
+    setIsSubmitting(false); 
   }
+};
+
 
   if (!isValidRole) return null
 

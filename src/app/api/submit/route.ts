@@ -9,7 +9,20 @@ interface FormData {
     district: string;
 }
 
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN; // Only allow this website
+
 export async function POST(request: Request) {
+    const origin = request.headers.get('origin');
+
+    if (origin !== ALLOWED_ORIGIN) {
+        return new NextResponse('Forbidden: Invalid origin', {
+            status: 403,
+            headers: {
+                'Access-Control-Allow-Origin': 'null',
+            },
+        });
+    }
+
     try {
         const body = (await request.json()) as FormData;
 
@@ -37,10 +50,14 @@ export async function POST(request: Request) {
 
         await sheet.addRow(row);
 
-        return NextResponse.json({ message: 'Success' });
+        return new NextResponse(JSON.stringify({ message: 'Success' }), {
+            status: 200,
+            headers: {
+                'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+            },
+        });
     } catch (error: unknown) {
         console.error('Detailed error:', error);
-
         const message =
             error instanceof Error
                 ? error.message
@@ -48,9 +65,11 @@ export async function POST(request: Request) {
                 ? error
                 : 'Internal Server Error';
 
-        return NextResponse.json(
-            { error: message },
-            { status: 500 }
-        );
+        return new NextResponse(JSON.stringify({ error: message }), {
+            status: 500,
+            headers: {
+                'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+            },
+        });
     }
 }
