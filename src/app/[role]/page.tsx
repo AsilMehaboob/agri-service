@@ -82,7 +82,7 @@ export default function RegistrationForm() {
           <div className="bg-[#F4F8F2] p-2 rounded-full">
             <Sprout className="h-5 w-5 text-[#1F514C]" />
           </div>
-          <h2 className="ml-2 text-xl font-medium text-[#1F514C]">KrishiSetu</h2>
+          <h2 className="text-xl font-bold text-[#1F514C]">KrishiSetu</h2>
         </motion.div>
 
         <motion.div
