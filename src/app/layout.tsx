@@ -4,11 +4,10 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['100','200','300','400','500','600','700','800','900'],
   variable: '--font-inter',
   display: 'swap',
 });
-
 
 export const metadata: Metadata = {
   title: "KrishiSetu",
@@ -18,8 +17,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap" 
+          rel="stylesheet" 
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
 }
-

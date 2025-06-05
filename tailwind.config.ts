@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -8,9 +7,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
+        hedvig: ['"Hedvig Letters Serif"', 'serif'],
       },
       colors: {
-        primary: '#1F514C', // your custom color
+        primary: '#1F514C',
       },
     },
   },
