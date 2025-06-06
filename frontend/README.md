@@ -129,3 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Google Sheets API](https://developers.google.com/sheets/api)
+
+## Figma
+
+https://www.figma.com/design/Pz6MRFL4XAGQY4T8z3YloM/KrishiSetu?node-id=0-1&t=Os0mO6SuphXIn612-1 
